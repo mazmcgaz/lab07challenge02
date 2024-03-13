@@ -1,0 +1,40 @@
+<!-- 
+    The <form> elements allows web users to enter data to POST back to the server-side code. 
+    It holds two important attributes, action which tells it where to POST the data to which is 
+    the same route, and method which is how you want to send the form data.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/furtive/2.3.0/furtive.min.css"
+    />
+  </head>
+  <body>
+    <div class="measure p2">
+      <h2><a href="/" class="btn--link">Tony's Burgers</a></h2>
+      <div class="h5">Add a burger...</div>
+      <div class="grd">
+        <!-- 
+            HERE is the <form> element
+        -->
+        <form action="/admin/add" method="POST" role="form" class="my1">
+          <label for="burgername">Burger Name</label>
+          <input type="text" name="burgername" />
+          <label for="descript">Description</label>
+          <textarea name="descript" rows="2"></textarea>
+          <label for="ingreds">Ingredients</label>
+          <textarea name="ingreds" rows="2"></textarea>
+          <label for="burgerprice">Price</label>
+          <input type="number" step=".01" name="burgerprice" />
+          <input type="submit" value="Add burger" class="btn--blue" />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
